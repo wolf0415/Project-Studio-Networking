@@ -1,0 +1,26 @@
+
+Layer 3 Switch Name Here:
+ip routing
+int vlan 10
+ip address
+int vlan 20
+ip address
+int vlan 30
+ip address
+int vlan 40
+ip address
+int vlan 50
+ip address
+int vlan 60
+ip address
+int vlan 70
+ip address
+int vlan 80
+ip address
+int vlan 99
+ip address
+int vlan 100
+ip address
+int vlan 200
+ip address
+
