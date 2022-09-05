@@ -1,0 +1,18 @@
+!! In the main/primary Switch(Layer 3)
+
+en
+config t
+vtp domain Highschool.com
+vtp version 2 
+vtp mode server
+vtp password school2022
+
+
+!! in all other switches
+
+en
+config t
+vtp domain Highschool.com
+vtp version 2 
+vtp mode client
+vtp password school2022

@@ -1,0 +1,26 @@
+
+
+en
+conf t
+vlan 10	
+name Teachers Wi-Fi
+vlan 20	
+name Students Wi-Fi
+vlan 30	
+name Guests Wi-Fi
+vlan 40
+name Projector-Printers Wi-Fi
+vlan 50
+name Students
+vlan 60	
+name Faculty-Staff
+vlan 99	
+name Management
+vlan 100	
+name VIOP-Phone
+vlan 200	
+name Server
+vlan 999	
+name Blackhole
+vlan 888
+name Native
