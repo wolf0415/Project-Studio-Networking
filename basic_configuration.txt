@@ -3,54 +3,77 @@ en
 conf t
 int g0/1
 sw m t
+sw t n v 888
+
+conf t
+int f0/1
+sw m a
+sw a v 50
+exit
 
 G-Pool-SW1:
 en
 conf t
 int g0/1
 sw m t
+sw t n v 888
 
 C-Pool-SW1:
 en
 conf t
 int g0/1
 sw m t
+sw t n v 888
 
 B-WiFi-SW1:
 en
 conf t
 int g0/1
 sw m t
+sw t n v 888
 
 J-WiFi-SW1:
 en
 conf t
 int g0/1
 sw m t
+sw t n v 888
 
 J-Pool-SW1:
 en
 conf t
 int g0/1
 sw m t
+sw t n v 888
 
 J-Pool-SW2:
 en
 conf t
 int g0/1
 sw m t
+sw t n v 888
 
 J-SL-SW1:
 en
 conf t
 int g0/1
 sw m t
+sw t n v 888
 
 J-SL-SW2:
 en
 conf t
 int g0/1
 sw m t
+sw t n v 888
+
+ServerFarmSwitch:
+en
+conf t
+int g0/1
+sw m t
+sw t n v 888
+
 
 
 D1:
@@ -65,8 +88,9 @@ sw m t
 sw t n v 888
 no shut
 
-int r g0/8-17
+int r g1/0/8-17
 sw m t
+sw t n v 888
 exit
 
 ip routing
@@ -102,6 +126,13 @@ sw m t
 sw t n v 888
 no shut
 exit
+
+int g1/0/9
+sw m t
+sw t n v 888
+exit
+
+
 
 
 

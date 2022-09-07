@@ -3,22 +3,22 @@
 en
 conf t
 vlan 10	
-name Teachers Wi-Fi
+name Teachers-WiFi
 vlan 20	
-name Students Wi-Fi
+name Students-WiFi
 vlan 30	
-name Guests Wi-Fi
+name Guests-WiFi
 vlan 40
-name Projector-Printers Wi-Fi
+name Projector-Printers-WiFi
 vlan 50
 name Students
 vlan 60	
 name Faculty-Staff
 vlan 99	
 name Management
-vlan 100	
-name VOIP-Phone
-vlan 200	
+vlan 80
+name VOIP-Phones
+vlan 70	
 name Server
 vlan 999	
 name Blackhole
