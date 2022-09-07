@@ -2,7 +2,7 @@
 ! All of the configuration are the same across all networking devices besides the hostname ! 
 ! `security passwords min-length 5` are only limited to Routers only ! 
 
-[G Building]
+[G Building][NOT DONE]
 en
 conf t
 hostname G-WiFi-SW1
@@ -22,11 +22,11 @@ exec-timeout 6
 ! Copy and paste END HERE ! 
 
 ! MDF ! 
-[D1]
+[D1][DONE]
 hostname D1
 ip domain-name Highschool.com
 service password-encryption
-security passwords min-length 5
+security passwords min-length>> it does not work<<
 username cisco secret ciscosshpa55
 crypto key generate rsa
 1024
@@ -37,7 +37,7 @@ login local
 exec-timeout 6
 
 
-[D2]
+[D2][DONE]
 hostname D2
 ip domain-name Highschool.com
 service password-encryption
@@ -52,8 +52,8 @@ login local
 exec-timeout 6
 
 
-[MDF-ServerFarm-SW1]
-hostname MDF-ServerFarm-SW1
+[MDF-ServerFarm-SW1][DONE]
+hostname ServerFarm-SW1
 ip domain-name Highschool.com
 service password-encryption
 security passwords min-length 5
@@ -67,7 +67,7 @@ login local
 exec-timeout 6
 
 
-[R1]
+[R1][NOT DONE]
 hostname R1
 ip domain-name Highschool.com
 service password-encryption
@@ -82,7 +82,7 @@ login local
 exec-timeout 6
 
 
-[R2]
+[R2][NOT DONE]
 hostname R2
 ip domain-name Highschool.com
 service password-encryption
@@ -98,23 +98,23 @@ exec-timeout 6
 
 
 ! G Buiding !
-hostname G-SW1
-hostname G-SW2
-hostname G-WiFi-SW1
+hostname G1-Pool-SW1 [DONE]
+hostname G1-Pool-SW2 [DONE]
+hostname G1-WiFi-SW1 
 
 ! C building !  
-hostname C-SW1
+hostname C1-Pool-SW1  [DONE]
 
 ! B Building ! 
-hostname B-SW1
+hostname B1-SW1
 
 ! J Building ! 
-hostname J-WiFi-SW1
+hostname J1-WiFi-SW1
 
-hostname J-Pool-SW2
+hostname J2-Pool-SW1   [DONE]
 
-hostname J-Pool-SW1
+hostname J2-Pool-SW2   [DONE]
 
-hostname J-SL-SW2
+hostname J2-SL-SW1   [DONE]
 
-hostname J-SL-SW1
+hostname J1-SL-SW1  [DONE]

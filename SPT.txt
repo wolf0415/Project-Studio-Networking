@@ -1,0 +1,6 @@
+!! in ALL Switches
+
+
+en
+conf t
+spanning-tree mode rapid-pvst 
