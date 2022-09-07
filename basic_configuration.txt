@@ -1,5 +1,74 @@
+G-WiFi-SW1:
+en
+conf t
+int g0/
+sw m t
+
+G-Pool-SW1:
+en
+conf t
+int g0/
+sw m t
+
+C-Pool-SW1:
+en
+conf t
+int g0/
+sw m t
+
+B-WiFi-SW1:
+en
+conf t
+int g0/
+sw m t
+
+J-WiFi-SW1:
+en
+conf t
+int g0/
+sw m t
+
+J-Pool-SW1:
+en
+conf t
+int g0/
+sw m t
+
+J-Pool-SW2:
+en
+conf t
+int g0/
+sw m t
+
+J-SL-SW1:
+en
+conf t
+int g0/
+sw m t
+
+J-SL-SW2:
+en
+conf t
+int g0/
+sw m t
+
 
 D1:
+en
+conf t
+int r g0/7-8
+shut
+channel-group 1 mode active
+no shut
+int po1
+sw m t
+sw t n v 888
+no shut
+
+int r g0/X-X
+sw m t
+exit
+
 ip routing
 int vlan 10
 ip address 10.1.10.1 255.255.255.0
@@ -19,3 +88,19 @@ int vlan 80
 ip address 10.1.80.1 255.255.255.0
 int vlan 90
 ip address 10.1.90.1 255.255.255.0
+
+D2:
+en
+conf t
+int r g0/7-8
+shut
+channel-group 1 mode active
+no shut
+int po1
+sw m t
+sw t n v 888
+no shut
+exit
+
+
+
