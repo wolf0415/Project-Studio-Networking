@@ -1,5 +1,6 @@
 ! hostname <Building_name>-<type_of_device>-<device_ID> ! 
 ! All of the configuration are the same across all networking devices besides the hostname ! 
+! `security passwords min-length 5` are only limited to Routers only ! 
 
 [G Building]
 en
