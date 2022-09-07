@@ -1,10 +1,33 @@
-ostname <Building_name>-<type_of_device>-<device_ID> ! 
-
+! hostname <Building_name>-<type_of_device>-<device_ID> ! 
+! All of the configuration are the same across all networking devices besides the hostname ! 
 
 [G Building]
 en
 conf t
 hostname G-WiFi-SW1
+! This part can be copy and paste ! 
+ip domain-name CCNP
+service password-encryption
+security passwords min-length 5
+username cisco secret ciscosshpa55
+crypto key generate rsa
+1024
+login block-for 180 attempts 4 within 120
+line vty 0 4
+transport input ssh 
+login local
+exec-timeout 6
+line console 0
+password projectstudio55
+login 
+end 
+conf t
+enable secret projectstudio55
+! Copy and paste END HERE ! 
+
+! MDF ! 
+[D1]
+hostname D1
 ip domain-name CCNP
 service password-encryption
 security passwords min-length 5
@@ -23,25 +46,99 @@ end
 conf t
 enable secret projectstudio55
 
-[MDF]
-hostname D1
-
+[D2]
 hostname D2
+ip domain-name CCNP
+service password-encryption
+security passwords min-length 5
+username cisco secret ciscosshpa55
+crypto key generate rsa
+1024
+login block-for 180 attempts 4 within 120
+line vty 0 4
+transport input ssh 
+login local
+exec-timeout 6
+line console 0
+password projectstudio55
+login 
+end 
+conf t
+enable secret projectstudio55
 
+[MDF-ServerFarm-SW1]
 hostname MDF-ServerFarm-SW1
-hostname R1
-hostname R2
+ip domain-name CCNP
+service password-encryption
+security passwords min-length 5
+username cisco secret ciscosshpa55
+crypto key generate rsa
+1024
+login block-for 180 attempts 4 within 120
+line vty 0 4
+transport input ssh 
+login local
+exec-timeout 6
+line console 0
+password projectstudio55
+login 
+end 
+conf t
+enable secret projectstudio55
 
-[G Buiding]
+[R1]
+hostname R1
+ip domain-name CCNP
+service password-encryption
+security passwords min-length 5
+username cisco secret ciscosshpa55
+crypto key generate rsa
+1024
+login block-for 180 attempts 4 within 120
+line vty 0 4
+transport input ssh 
+login local
+exec-timeout 6
+line console 0
+password projectstudio55
+login 
+end 
+conf t
+enable secret projectstudio55
+
+[R2]
+hostname R2
+ip domain-name CCNP
+service password-encryption
+security passwords min-length 5
+username cisco secret ciscosshpa55
+crypto key generate rsa
+1024
+login block-for 180 attempts 4 within 120
+line vty 0 4
+transport input ssh 
+login local
+exec-timeout 6
+line console 0
+password projectstudio55
+login 
+end 
+conf t
+enable secret projectstudio55
+
+
+! G Buiding !
 hostname G-SW1
+
 hostname G-WiFi-SW1
-[C building] 
+
+! C building !  
 hostname C-SW1
 
-[B Building] 
+! B Building ! 
 hostname B-SW1
 
-[J Building]
+! J Building ! 
 hostname J-WiFi-SW1
 
 hostname J-Pool-SW2
