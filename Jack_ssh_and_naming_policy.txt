@@ -17,12 +17,7 @@ line vty 0 4
 transport input ssh 
 login local
 exec-timeout 6
-line console 0
-password projectstudio55
-login 
-end 
-conf t
-enable secret projectstudio55
+
 ! Copy and paste END HERE ! 
 
 ! MDF ! 
@@ -39,12 +34,7 @@ line vty 0 4
 transport input ssh 
 login local
 exec-timeout 6
-line console 0
-password projectstudio55
-login 
-end 
-conf t
-enable secret projectstudio55
+
 
 [D2]
 hostname D2
@@ -59,12 +49,7 @@ line vty 0 4
 transport input ssh 
 login local
 exec-timeout 6
-line console 0
-password projectstudio55
-login 
-end 
-conf t
-enable secret projectstudio55
+
 
 [MDF-ServerFarm-SW1]
 hostname MDF-ServerFarm-SW1
@@ -79,12 +64,7 @@ line vty 0 4
 transport input ssh 
 login local
 exec-timeout 6
-line console 0
-password projectstudio55
-login 
-end 
-conf t
-enable secret projectstudio55
+
 
 [R1]
 hostname R1
@@ -99,12 +79,7 @@ line vty 0 4
 transport input ssh 
 login local
 exec-timeout 6
-line console 0
-password projectstudio55
-login 
-end 
-conf t
-enable secret projectstudio55
+
 
 [R2]
 hostname R2
@@ -119,12 +94,6 @@ line vty 0 4
 transport input ssh 
 login local
 exec-timeout 6
-line console 0
-password projectstudio55
-login 
-end 
-conf t
-enable secret projectstudio55
 
 
 ! G Buiding !
