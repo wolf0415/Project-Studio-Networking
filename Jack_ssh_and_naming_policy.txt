@@ -6,7 +6,7 @@ en
 conf t
 hostname G-WiFi-SW1
 ! This part can be copy and paste ! 
-ip domain-name CCNP
+ip domain-name Highschool.com
 service password-encryption
 security passwords min-length 5
 username cisco secret ciscosshpa55
@@ -28,7 +28,7 @@ enable secret projectstudio55
 ! MDF ! 
 [D1]
 hostname D1
-ip domain-name CCNP
+ip domain-name Highschool.com
 service password-encryption
 security passwords min-length 5
 username cisco secret ciscosshpa55
@@ -48,7 +48,7 @@ enable secret projectstudio55
 
 [D2]
 hostname D2
-ip domain-name CCNP
+ip domain-name Highschool.com
 service password-encryption
 security passwords min-length 5
 username cisco secret ciscosshpa55
@@ -68,7 +68,7 @@ enable secret projectstudio55
 
 [MDF-ServerFarm-SW1]
 hostname MDF-ServerFarm-SW1
-ip domain-name CCNP
+ip domain-name Highschool.com
 service password-encryption
 security passwords min-length 5
 username cisco secret ciscosshpa55
@@ -88,7 +88,7 @@ enable secret projectstudio55
 
 [R1]
 hostname R1
-ip domain-name CCNP
+ip domain-name Highschool.com
 service password-encryption
 security passwords min-length 5
 username cisco secret ciscosshpa55
@@ -108,7 +108,7 @@ enable secret projectstudio55
 
 [R2]
 hostname R2
-ip domain-name CCNP
+ip domain-name Highschool.com
 service password-encryption
 security passwords min-length 5
 username cisco secret ciscosshpa55
