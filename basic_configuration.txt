@@ -1,62 +1,62 @@
 G-WiFi-SW1:
 en
 conf t
-int g0/
+int g0/1
 sw m t
 
 G-Pool-SW1:
 en
 conf t
-int g0/
+int g0/1
 sw m t
 
 C-Pool-SW1:
 en
 conf t
-int g0/
+int g0/1
 sw m t
 
 B-WiFi-SW1:
 en
 conf t
-int g0/
+int g0/1
 sw m t
 
 J-WiFi-SW1:
 en
 conf t
-int g0/
+int g0/1
 sw m t
 
 J-Pool-SW1:
 en
 conf t
-int g0/
+int g0/1
 sw m t
 
 J-Pool-SW2:
 en
 conf t
-int g0/
+int g0/1
 sw m t
 
 J-SL-SW1:
 en
 conf t
-int g0/
+int g0/1
 sw m t
 
 J-SL-SW2:
 en
 conf t
-int g0/
+int g0/1
 sw m t
 
 
 D1:
 en
 conf t
-int r g0/7-8
+int r g1/0/1-6
 shut
 channel-group 1 mode active
 no shut
@@ -65,7 +65,7 @@ sw m t
 sw t n v 888
 no shut
 
-int r g0/X-X
+int r g0/8-17
 sw m t
 exit
 
@@ -86,13 +86,14 @@ int vlan 70
 ip address 10.1.70.1 255.255.255.0
 int vlan 80
 ip address 10.1.80.1 255.255.255.0
-int vlan 90
-ip address 10.1.90.1 255.255.255.0
+int vlan 99
+ip address 10.1.99.1 255.255.255.0
+end
 
 D2:
 en
 conf t
-int r g0/7-8
+int r g1/0/1-6
 shut
 channel-group 1 mode active
 no shut
