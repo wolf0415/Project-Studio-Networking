@@ -99,7 +99,7 @@ exec-timeout 6
 
 ! G Buiding !
 hostname G-SW1
-
+hostname G-SW2
 hostname G-WiFi-SW1
 
 ! C building !  
