@@ -67,12 +67,21 @@ int g0/1
 sw m t
 sw t n v 888
 
-ServerFarmSwitch:
+ServerFarm-SW1:
 en
 conf t
 int g0/1
 sw m t
 sw t n v 888
+
+==========================
+SPRINT 2 ITEMS
+==========================
+en [done]
+conf t [done]
+int r f0/2-5 [done]
+sw m a [done]
+sw a v 70 [done]
 
 
 
