@@ -1,0 +1,21 @@
+[ServerFarmSwitch]
+en
+conf t
+ip dhcp snooping 
+ip dhcp snooping vlan 10-80
+int f0/3
+ip dhcp snooping trust 
+
+
+
+!! Apply to all networking devices !! 
+line console 0
+password projectstudio55
+login 
+end 
+conf t
+enable secret projectstudio55
+
+
+
+
