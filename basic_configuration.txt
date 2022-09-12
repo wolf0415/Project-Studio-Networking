@@ -67,24 +67,6 @@ int g0/1
 sw m t
 sw t n v 888
 
-ServerFarm-SW1:
-en
-conf t
-int g0/1
-sw m t
-sw t n v 888
-
-==========================
-SPRINT 2 ITEMS
-==========================
-en [done]
-conf t [done]
-int r f0/2-5 [done]
-sw m a [done]
-sw a v 70 [done]
-
-
-
 D1:
 en
 conf t
@@ -102,6 +84,15 @@ sw m t
 sw t n v 888
 exit
 
+ip access-list extended FILE_SERVER_POLICY
+permit ip 10.1.50.0 0.0.0.255 host 10.1.70.2
+permit ip 10.1.60.0 0.0.0.255 host 10.1.70.2
+permit ip 10.1.60.0 0.0.0.255 host 10.1.70.3
+permit ip 10.1.99.0 0.0.0.255 host 10.1.70.4
+deny ip any any
+exit
+
+
 ip routing
 int vlan 10
 ip address 10.1.10.1 255.255.255.0
@@ -117,6 +108,11 @@ int vlan 60
 ip address 10.1.60.1 255.255.255.0
 int vlan 70
 ip address 10.1.70.1 255.255.255.0
+==============
+SPRINT 2 ITEMS
+==============
+ip access-group FILE_SERVER_POLICY out
+==============
 int vlan 80
 ip address 10.1.80.1 255.255.255.0
 int vlan 99
@@ -140,6 +136,14 @@ int g1/0/9
 sw m t
 sw t n v 888
 exit
+
+==============
+SPRINT 2 ITEMS
+==============
+int r g1/0/7-11
+sw m a
+sw a v 70
+==============
 
 
 

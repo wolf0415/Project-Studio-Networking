@@ -1,0 +1,23 @@
+D1:
+en
+conf t
+
+ip access-list extended FILE_SERVER_POLICY
+permit ip 10.1.50.0 0.0.0.255 host 10.1.70.2
+permit ip 10.1.60.0 0.0.0.255 host 10.1.70.2
+permit ip 10.1.60.0 0.0.0.255 host 10.1.70.3
+permit ip 10.1.99.0 0.0.0.255 host 10.1.70.4
+deny ip any any
+exit
+
+int vlan 70
+ip access-group FILE_SERVER_POLICY out
+
+
+D2:
+en
+conf t
+
+int r g1/0/7-11
+sw m a
+sw a v 70
