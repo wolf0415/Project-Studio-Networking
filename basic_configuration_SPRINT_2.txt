@@ -12,6 +12,19 @@ exit
 
 int vlan 70
 ip access-group FILE_SERVER_POLICY out
+exit
+
+int g1/0/24
+no sw
+ip address 10.255.3.1 255.255.255.252
+no shut
+
+
+router ospf 1
+router-id 1.1.1.1
+network 10.1.0.0 0.0.255.255 area 0
+network 10.255.3.0 0.0.0.3 area 0
+
 
 
 D2:
@@ -21,3 +34,65 @@ conf t
 int r g1/0/7-11
 sw m a
 sw a v 70
+
+R1:
+en
+conf t
+
+int s0/1/1
+ip address 10.255.1.1 255.255.255.252
+no shut
+
+int s0/1/0
+ip address 10.255.2.1 255.255.255.252
+no shut
+
+int g0/0/0
+ip address 10.255.3.1 255.255.255.252
+no shut
+
+router ospf 1
+router-id 2.2.2.2
+network 10.255.1.0 0.0.0.3 area 0
+network 10.255.2.0 0.0.0.3 area 0
+network 10.255.3.0 0.0.0.3 area 0
+
+exit
+ip route 0.0.0.0 0.0.0.0 s0/1/0
+router ospf 1
+default-information originate
+
+R2:
+en
+conf t
+
+int s0/1/0
+ip address 10.255.4.1 255.255.255.252
+no shut
+
+int s0/1/1
+ip address 10.255.1.2 255.255.255.252
+no shut
+
+int g0/0/0
+ip address 10.255.5.1 255.255.255.252
+no shut
+
+
+router ospf 1
+router-id 3.3.3.3
+network 10.255.1.0 0.0.0.3 area 0
+network 10.255.4.0 0.0.0.3 area 0
+
+ISP Router:
+en
+conf t
+
+int s0/1/0
+ip address 10.255.2.2 255.255.255.252
+no shut
+
+int s0/1/1
+ip address 10.255.4.2 255.255.255.252
+no shut
+
