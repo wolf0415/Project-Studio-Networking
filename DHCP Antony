@@ -44,3 +44,7 @@ default-router 10.1.80.1
 
 
 
+#on D1 assign Helper address of dhcp server
+en
+conf t
+ip helper-address 10.1.70.5
