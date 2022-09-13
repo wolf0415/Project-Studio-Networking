@@ -1,5 +1,5 @@
 !! DHCP Snooping !! 
-[ServerFarmSwitch]
+[ServerFarmSwitch] (DONE)
 en
 conf t
 ip dhcp snooping 
@@ -24,7 +24,7 @@ sw port-security
 sw port-security mac-address sticky
 
 
-!! Apply to all networking devices (SSH) !! 
+!! Apply to all networking devices (SSH) !! (DONE)
 ip domain-name Highschool.com
 service password-encryption
 security passwords min-length 5
