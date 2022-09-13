@@ -61,6 +61,14 @@ exit
 ip route 0.0.0.0 0.0.0.0 s0/1/0
 router ospf 1
 default-information originate
+exit
+
+access-list 1 permit 10.0.0.0 0.255.255.255
+ip nat inside source list 1 int s0/1/0 overload
+int s0/1/0
+ip nat outside
+int g0/0/0
+ip nat inside
 
 R2:
 en
