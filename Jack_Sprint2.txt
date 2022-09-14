@@ -11,17 +11,20 @@ ip dhcp snooping trust
 
 !! Apply to all networking devices (password authentication) !! 
 line console 0
-password projectstudio55
+password cisco55
 login 
 end 
 conf t
-enable secret projectstudio55
+enable secret cisco55
 
-!! Apply to all layer 2 switches (Port-security) !! 
+!! Apply to all layer 2 switches (Port-security) !!  (DONE)
 en
 conf t
+int ra f0/1-2
+sw m a
 sw port-security 
 sw port-security mac-address sticky
+sw port-security max 3
 
 
 !! Apply to all networking devices (SSH) !! (DONE)
