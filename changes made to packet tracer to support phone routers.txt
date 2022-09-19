@@ -1,0 +1,18 @@
+R1:
+
+access-list 1 permit 10.0.0.0 0.255.255.255
+ip nat inside source list 1 int s0/1/1 overload
+int s0/1/1
+ip nat outside
+int f0/0
+ip nat inside
+exit
+
+ip access-list extended FIREWALL
+deny icmp 200.120.120.0 0.0.0.3 200.162.125.0 0.0.0.3
+deny ip 200.200.200.0 0.0.0.3 200.162.125.0 0.0.0.3
+permit ip any any
+exit
+
+int s0/1/1
+ip access-group FIREWALL in
